@@ -10,31 +10,49 @@ import Image from "next/image";
 import Dwello from "../../public/images/dwello.png";
 import GentPortfolio from "../../public/images/gentportfolio.png";
 import ChuckNorris from "../../public/images/chuckNorris.png";
+import Thisproject from "../../public/images/thisproject.png";
 
 const slides = [
   {
-    id: 1,
+    id: 2,
+    title: "This Project",
+    technologies: ["Next Js", "Gsap", "Tailwind CSS"],
+    content:
+      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
+    image: Thisproject,
+    githubLink: "https://github.com/Genthh/personalPortfolio",
+    deploymentLink: "https://personal-portfolio-woad-omega-19.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Dwello Project",
     technologies: ["Next Js", "Gsap", "Tailwind CSS"],
     content:
       "The Dwello app is designed to help users find their perfect home with an interactive and visually appealing interface. The application leverages the power of Next.js for server-side rendering and GSAP for smooth and engaging animations.",
     image: Dwello,
+    githubLink: "https://github.com/Genthh/dwello",
+    deploymentLink:
+      "https://dwello-g5mg-8af0aved4-genthhs-projects.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Gent Portfolio V1",
     technologies: ["Next Js", "Three js", "Gsap", "Tailwind CSS"],
     content:
       "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
     image: GentPortfolio,
+    githubLink: "https://github.com/Genthh/gent-hulaj-portfolio",
+    deploymentLink: "https://gent-hulaj.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Chuck Norris Jokes",
     technologies: ["Next Js", "ThreeGsap", "Tailwind CSS"],
     content:
       "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
     image: ChuckNorris,
+    githubLink: "https://github.com/Genthh/Chuck-Norris-jokes",
+    deploymentLink: "https://chuck-norris-jokes-blue.vercel.app/",
   },
 ];
 
@@ -103,7 +121,7 @@ const Slider: React.FC<SliderProps> = () => {
                     alt={slide.title}
                     width={400}
                     height={400}
-                    className="rounded"
+                    className="rounded shadow-2xl"
                   />
                 </div>
                 <Tooltip title="GitHub Repository" placement="top" arrow>

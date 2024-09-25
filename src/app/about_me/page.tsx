@@ -20,7 +20,7 @@ const page = () => {
           setLoading(false);
         },
       });
-    }, 100);
+    }, 50);
   }, []);
 
   useGSAP(() => {
