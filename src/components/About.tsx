@@ -132,7 +132,7 @@ const About = () => {
           <Button
             ref={addToRefs}
             className={clsx(
-              active === "projects text-sm"
+              active === "projects"
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple   "
             )}

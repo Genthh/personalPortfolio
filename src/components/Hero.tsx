@@ -39,20 +39,20 @@ export const Hero: React.FC = () => {
           />
         </div>
 
-        <div className="flex gap-3 md:flex-col md:items-end items-end">
+        <div className="flex gap-3 justify-start md:items-center items-end">
           <Button onClick={downloadTxtFile} text="Download CV" />
-          <div className="flex gap-x-4">
-            <div className="flex items-center justify-center h-12 w-12 rounded-full bg-customPurple shadow-lg cursor-pointer">
+          <div className="flex gap-x-3">
+            <div className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer">
               <LinkedIn />
             </div>
-            <div className="flex items-center justify-center h-12 w-12 rounded-full bg-customPurple shadow-lg cursor-pointer">
+            <div className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer">
               <GitHub />
             </div>
           </div>
         </div>
       </div>
       <Lottie
-        className="md:h-[500px] w-[200px] md:w-auto  h-[300px]  self-start md:self-auto "
+        className="md:h-[500px] w-[300px] md:w-auto  h-[400px]  md:self-auto "
         animationData={gentCoding}
         loop={false}
       />

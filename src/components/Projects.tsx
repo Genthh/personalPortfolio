@@ -68,7 +68,7 @@ const Slider: React.FC<SliderProps> = () => {
       >
         <NavigateNextIcon className=" rotate-180" />
       </button>
-      <div className="w-full overflow-hidden border-2 border-darkPurple shadow-xl rounded">
+      <div className="w-full overflow-hidden border-2 border-darkPurple shadow-xl rounded ">
         <div
           className="flex transition-transform duration-300"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -118,16 +118,16 @@ const Slider: React.FC<SliderProps> = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center gap-x-5 mt-2">
+      <div className="flex justify-center items-center  md:hidden gap-x-5 md:h mt-2">
         <button
           onClick={prevSlide}
-          className="border-2 text-customWhite block md:hidden border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
+          className="border-2 text-customWhite  border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
         >
           <NavigateNextIcon className=" rotate-180" />
         </button>
         <button
           onClick={nextSlide}
-          className="border-2 block md:hidden text-customWhite border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
+          className="border-2 text-customWhite border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
         >
           <NavigateNextIcon />
         </button>

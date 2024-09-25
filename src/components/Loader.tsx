@@ -68,7 +68,7 @@ export const Loader = () => {
         />
         <g id="clipPathReveal" clipPath="url(#theClipPath)">
           <text
-            transform="translate(50 55)"
+            transform="translate(50 56)"
             textAnchor="middle"
             fontSize="18"
             fill="#D9D9D9"

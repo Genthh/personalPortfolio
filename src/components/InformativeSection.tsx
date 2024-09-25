@@ -23,7 +23,7 @@ const InformativeSection = () => {
   return (
     <div className="text-white border-2 border-darkPurple flex flex-col gap-y-3  bg- bg-opacity-50  shadow-xl px-4 py-2 rounded">
       <h1 ref={textRef} className="text-2xl font-bold">
-        Who am <span className="text-darkPurple">I</span>?
+        Who am I?
       </h1>
       <p ref={paragraphRef}>
         Innovative <span className="text-darkPurple"> Frontend Developer </span>
