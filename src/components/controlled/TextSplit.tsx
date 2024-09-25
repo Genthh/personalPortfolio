@@ -25,7 +25,7 @@ export const TextSplit: React.FC<TextSplitProps> = ({
     gsap.fromTo(
       ".char",
       { opacity: 0, x: 20 },
-      { opacity: 1, x: 0, stagger: 0.07, duration: 0.4, ease: "power2.out" }
+      { opacity: 1, x: 0, stagger: 0.04, duration: 0.3, ease: "power2.out" }
     );
   };
 
