@@ -81,9 +81,9 @@ const About = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-10 justify-center">
+    <div className="flex flex-col md:gap-y-10 gap-y-5 justify-center">
       <div className="flex flex-col">
-        <div className="flex md:mt-40 mt-20 items-end justify-between ">
+        <div className="flex md:mt-40 mt-5 items-end justify-between ">
           <h1 ref={textRef} className="md:text-4xl text-2xl text-customWhite">
             Gent <span className="text-darkPurple">Hulaj</span>
           </h1>

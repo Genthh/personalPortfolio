@@ -11,7 +11,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="max-w-6xl items-center md:mx-auto px-10 md:px-4 mx-5 overflow-hidden">
+    // <div className="max-w-6xl items-center md:mx-auto px-10 md:px-4 mx-5 overflow-hidden">
+    <div className="max-w-6xl h-dvh flex  flex-col   md:mx-auto  md:px-4 mx-5 ">
       {/* {loading ? (
         <div className="flex justify-center items-center h-dvh ">
           <Lottie className="h-[500px] " animationData={loader} loop={true} />

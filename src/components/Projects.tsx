@@ -25,15 +25,15 @@ const slides = [
     title: "Gent Portfolio V1",
     technologies: ["Next Js", "Three js", "Gsap", "Tailwind CSS"],
     content:
-      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean design across all devices.",
+      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
     image: GentPortfolio,
   },
   {
     id: 3,
-    title: "Chuck Norris Jokes(Fun project)",
-    technologies: ["Next Js", "Three js", "Gsap", "Tailwind CSS"],
+    title: "Chuck Norris Jokes",
+    technologies: ["Next Js", "ThreeGsap", "Tailwind CSS"],
     content:
-      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean design across all devices.",
+      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
     image: ChuckNorris,
   },
 ];

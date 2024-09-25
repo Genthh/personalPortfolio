@@ -18,9 +18,9 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="flex md:flex-row md:h-dvh flex-col md:justify-between items-center md:mt-0 mt-20">
-      <div className="flex flex-col gap-y-10 justify-center">
-        <div className="flex flex-col gap-y-4">
+    <div className="flex md:flex-row md:h-dvh flex-col md:justify-between items-center md:mt-0 mt-5">
+      <div className="flex flex-col gap-y-12 justify-center">
+        <div className="flex flex-col md:gap-y-4">
           <TextSplit
             text={"Welcome community, I'm Gent."}
             fontSize="md:text-5xl text-2xl"
@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
       <Lottie
-        className="md:h-[500px] h-[300px] "
+        className="md:h-[500px] w-[200px] md:w-auto  h-[300px]  self-start md:self-auto "
         animationData={gentCoding}
         loop={false}
       />
