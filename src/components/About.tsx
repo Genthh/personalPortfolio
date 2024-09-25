@@ -84,7 +84,7 @@ const About = () => {
       case "experience":
         return <ExperienceSection />;
       case "skills":
-        return <SkillsSection sectionRef={sectionRef} />;
+        return <SkillsSection />;
       case "projects":
         return <ProjectSection />;
       default:
