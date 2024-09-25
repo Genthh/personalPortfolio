@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import InformativeSection from "./InformativeSection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,6 +16,14 @@ const About = () => {
   const positionRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLButtonElement[]>([]);
 
+  useEffect(() => {
+    // Retrieve the last active section from localStorage
+    const savedActive = localStorage.getItem("activeSection");
+    if (savedActive) {
+      setActive(savedActive);
+    }
+  }, []);
+
   const animate = () => {
     const tl = gsap.timeline();
 
@@ -25,22 +33,21 @@ const About = () => {
       { scaleX: 1, duration: 0.7, ease: "power2.out" }
     )
       .fromTo(
-        buttonsRef.current,
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.5, ease: "expo", stagger: 0.3 }
-      )
-      .fromTo(
         textRef.current,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
         "-=0.2"
       )
-
       .fromTo(
         positionRef.current,
         { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
         "-=0.2"
+      )
+      .fromTo(
+        buttonsRef.current,
+        { opacity: 0, x: "200px" },
+        { opacity: 1, x: 0, duration: 0.2, ease: "expo", stagger: 0.2 }
       );
   };
 
@@ -49,6 +56,7 @@ const About = () => {
       buttonsRef.current.push(el);
     }
   };
+
   const animateSection = () => {
     gsap.fromTo(
       sectionRef.current,
@@ -64,6 +72,11 @@ const About = () => {
   useGSAP(() => {
     animateSection();
   }, [active]);
+
+  const handleButtonClick = (section: string) => {
+    setActive(section);
+    localStorage.setItem("activeSection", section);
+  };
 
   const renderSection = () => {
     switch (active) {
@@ -106,7 +119,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => setActive("about")}
+            onClick={() => handleButtonClick("about")} // Use the handler function
             text="About"
           />
           <Button
@@ -116,7 +129,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => setActive("experience")}
+            onClick={() => handleButtonClick("experience")} // Use the handler function
             text="Experience"
           />
           <Button
@@ -126,7 +139,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => setActive("skills")}
+            onClick={() => handleButtonClick("skills")} // Use the handler function
             text="Skills"
           />
           <Button
@@ -136,7 +149,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple   "
             )}
-            onClick={() => setActive("projects")}
+            onClick={() => handleButtonClick("projects")} // Use the handler function
             text="Projects"
           />
         </div>
