@@ -202,7 +202,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-
+import Logo from "../_svgs/logo.svg";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const headerRef = useRef<HTMLHeadElement>(null);
@@ -285,7 +285,8 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-primary flex justify-between items-center">
       <div className="flex items-center justify-between w-full py-5">
-        <h1 className="text-3xl text-customPurple">PIRROX</h1>
+        {/* <h1 className="text-3xl text-customPurple">PIRROX</h1> */}
+        <Logo />
       </div>
       <div className="flex gap-x-5">
         <Link href="/" className="text-white text-l">

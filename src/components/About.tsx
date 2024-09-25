@@ -17,8 +17,7 @@ const About = () => {
   const buttonsRef = useRef<HTMLButtonElement[]>([]);
 
   useEffect(() => {
-    // Retrieve the last active section from localStorage
-    const savedActive = localStorage.getItem("activeSection");
+    const savedActive = sessionStorage.getItem("activeSection");
     if (savedActive) {
       setActive(savedActive);
     }
@@ -75,7 +74,7 @@ const About = () => {
 
   const handleButtonClick = (section: string) => {
     setActive(section);
-    localStorage.setItem("activeSection", section);
+    sessionStorage.setItem("activeSection", section);
   };
 
   const renderSection = () => {
