@@ -21,7 +21,7 @@ const slides = [
       "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
     image: Thisproject,
     githubLink: "https://github.com/Genthh/personalPortfolio",
-    deploymentLink: "https://personal-portfolio-woad-omega-19.vercel.app/",
+    deploymentLink: "https://pirrox.dev",
   },
   {
     id: 2,
@@ -86,7 +86,7 @@ const Slider: React.FC<SliderProps> = () => {
       >
         <NavigateNextIcon className=" rotate-180" />
       </button>
-      <div className="w-full overflow-hidden border-2 border-darkPurple shadow-xl rounded ">
+      <div className="max-w-screen-lg mx-auto w-full overflow-hidden border-2 border-darkPurple shadow-xl rounded">
         <div
           className="flex transition-transform duration-300"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -114,23 +114,35 @@ const Slider: React.FC<SliderProps> = () => {
               <div className="flex flex-wrap">
                 <p className="">{slide.content}</p>
               </div>
-              <div className="flex gap-x-3 items-end">
-                <div className="md:w-1/2">
+              <div className="flex gap-x-3 md:h-32  items-end">
+                <div className="md:w-1/2   ">
                   <Image
                     src={slide.image}
                     alt={slide.title}
                     width={400}
                     height={400}
-                    className="rounded shadow-2xl"
+                    className="rounded shadow-2xl max-w-full"
                   />
                 </div>
-                <Tooltip title="GitHub Repository" placement="top" arrow>
-                  <GitHub sx={{ fontSize: 35, cursor: "pointer" }} />
-                </Tooltip>
+                <a
+                  href={slide.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Tooltip title="GitHub Repository" placement="top" arrow>
+                    <GitHub sx={{ fontSize: 35, cursor: "pointer" }} />
+                  </Tooltip>
+                </a>
 
-                <Tooltip title="Open Project" placement="top" arrow>
-                  <OpenInNewIcon sx={{ fontSize: 35, cursor: "pointer" }} />
-                </Tooltip>
+                <a
+                  href={slide.deploymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Tooltip title="Open Project" placement="top" arrow>
+                    <OpenInNewIcon sx={{ fontSize: 35, cursor: "pointer" }} />
+                  </Tooltip>
+                </a>
               </div>
             </div>
           ))}
