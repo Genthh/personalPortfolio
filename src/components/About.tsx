@@ -118,7 +118,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => handleButtonClick("about")} // Use the handler function
+            onClick={() => handleButtonClick("about")}
             text="About"
           />
           <Button
@@ -128,7 +128,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => handleButtonClick("experience")} // Use the handler function
+            onClick={() => handleButtonClick("experience")}
             text="Experience"
           />
           <Button
@@ -138,7 +138,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple "
             )}
-            onClick={() => handleButtonClick("skills")} // Use the handler function
+            onClick={() => handleButtonClick("skills")}
             text="Skills"
           />
           <Button
@@ -148,7 +148,7 @@ const About = () => {
                 ? "bg-darkPurple "
                 : "bg-transparent hover:bg-darkPurple   "
             )}
-            onClick={() => handleButtonClick("projects")} // Use the handler function
+            onClick={() => handleButtonClick("projects")}
             text="Projects"
           />
         </div>
