@@ -19,17 +19,32 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ toggleMenu }) => {
         svgRef.current.classList.add("openmenu");
       }
     })
-      .to(".top", 0.2, { y: "-9px", transformOrigin: "50% 50%" }, "burg")
-      .to(".bot", 0.2, { y: "9px", transformOrigin: "50% 50%" }, "burg")
-      .to(".mid", 0.2, { scale: 0.1, transformOrigin: "50% 50%" }, "burg")
-      .add("rotate")
-      .to(".top", 0.2, { y: "5px" }, "rotate")
-      .to(".bot", 0.2, { y: "-5px" }, "rotate")
-      .to(".top", 0.2, { rotationZ: 45, transformOrigin: "50% 50%" }, "rotate")
+      .to(
+        ".top",
+        { y: "-9px", transformOrigin: "50% 50%", duration: 0.2 },
+        "burg"
+      )
       .to(
         ".bot",
-        0.2,
-        { rotationZ: -45, transformOrigin: "50% 50%" },
+        { y: "9px", transformOrigin: "50% 50%", duration: 0.2 },
+        "burg"
+      )
+      .to(
+        ".mid",
+        { scale: 0.1, transformOrigin: "50% 50%", duration: 0.2 },
+        "burg"
+      )
+      .add("rotate")
+      .to(".top", { y: "5px", duration: 0.2 }, "rotate")
+      .to(".bot", { y: "-5px", duration: 0.2 }, "rotate")
+      .to(
+        ".top",
+        { rotationZ: 45, transformOrigin: "50% 50%", duration: 0.2 },
+        "rotate"
+      )
+      .to(
+        ".bot",
+        { rotationZ: -45, transformOrigin: "50% 50%", duration: 0.2 },
         "rotate"
       );
   }, []);

@@ -26,7 +26,7 @@ export const Loader = () => {
   }, []);
 
   return (
-    <div className="flex justify-center h-screen items-center">
+    <div className="flex absolute  inset-0  bg-primary justify-center w-screen z-50 h-screen items-center">
       <svg
         ref={svgRef}
         id="demo"

@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="flex md:flex-row md:h-dvh flex-col md:justify-between items-center md:mt-0 mt-5">
+    <div className="flex md:flex-row heightContainer  flex-col md:justify-between items-center md:mt-0 ">
       <div className="flex flex-col gap-y-12 justify-center">
         <div className="flex flex-col md:gap-y-4">
           <TextSplit

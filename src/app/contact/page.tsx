@@ -5,12 +5,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="max-w-6xl h-dvh flex  flex-col md:mx-auto  md:px-4 mx-5 ">
-      <Navbar />
-      <div className="md:mt-40 mt-20">
-        <Projects />
-      </div>
-    </div>
+    <div className="max-w-6xl flex  flex-col md:mx-auto  md:px-4 mx-5 "></div>
   );
 };
 

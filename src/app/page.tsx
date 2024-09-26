@@ -15,16 +15,23 @@ export default function Home() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      gsap.to(containerRef.current, {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        onComplete: () => {
-          setLoading(false);
-        },
-      });
-    }, 2000);
+    const isFirstVisit = sessionStorage.getItem("hasVisited");
+
+    if (!isFirstVisit) {
+      setTimeout(() => {
+        gsap.to(containerRef.current, {
+          opacity: 0,
+          duration: 1,
+          ease: "power2.inOut",
+          onComplete: () => {
+            setLoading(false);
+            sessionStorage.setItem("hasVisited", "true");
+          },
+        });
+      }, 2000);
+    } else {
+      setLoading(false);
+    }
   }, []);
 
   useGSAP(() => {
@@ -40,13 +47,12 @@ export default function Home() {
   return (
     <div
       ref={containerRef}
-      className="max-w-6xl h-dvh flex flex-col md:mx-auto md:px-4 mx-5 overflow-hidden"
+      className="max-w-6xl  flex flex-col md:mx-auto md:px-4 mx-5 overflow-hidden"
     >
       {loading ? (
         <Loader />
       ) : (
         <>
-          <Navbar />
           <Hero />
         </>
       )}

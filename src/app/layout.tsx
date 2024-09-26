@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { Navbar } from "@/components/Navbar";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });
 export default function RootLayout({
@@ -11,7 +12,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+
+        {children}
+      </body>
     </html>
   );
 }
