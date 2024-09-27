@@ -4,8 +4,9 @@ import { Formik, Form, Field } from "formik";
 import axios from "axios";
 import gsap from "gsap";
 import { FormValues } from "@/types/types";
+import { useGSAP } from "@gsap/react";
 
-const API_URL: string | undefined = process.env.customKey;
+const API_URL: string | undefined = process.env.BACKEND_URL;
 
 const ContactForm: React.FC = () => {
   const initialValues: FormValues = {
@@ -14,8 +15,7 @@ const ContactForm: React.FC = () => {
     message: "",
   };
 
-  useEffect(() => {
-    // Animate the text and form fields
+  useGSAP(() => {
     gsap.fromTo(
       ".form-header",
       { opacity: 0, y: -20 },
