@@ -48,22 +48,26 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-x-5 text-lg">
-          <Link href="/" className="text-white" onClick={handleLinkClick}>
+          <Link
+            href="/"
+            className="text-white hover:text-darkPurple ease-in duration-150 relative group"
+          >
             Home
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             href="/about_me"
-            className="text-white"
-            onClick={handleLinkClick}
+            className="text-white hover:text-darkPurple ease-in duration-150 relative group"
           >
             About
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             href="/contact"
-            className="text-white"
-            onClick={handleLinkClick}
+            className="text-white hover:text-darkPurple ease-in duration-150 relative group"
           >
             Contact
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
 
