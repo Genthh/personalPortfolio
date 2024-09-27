@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { FormValues } from "@/types/types";
 import { useGSAP } from "@gsap/react";
 
-const API_URL: string | undefined = process.env.BACKEND_URL;
+const API_URL: string | undefined = process.env.customKey;
 
 const ContactForm: React.FC = () => {
   const initialValues: FormValues = {
@@ -56,14 +56,11 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (values: FormValues) => {
     try {
-      const response = await axios.post(
-        `https://email-servic-1.onrender.com/send-email`,
-        {
-          recipientEmail: values.recipientEmail,
-          subject: values.subject,
-          message: values.message,
-        }
-      );
+      const response = await axios.post(`${API_URL}/send-email`, {
+        recipientEmail: values.recipientEmail,
+        subject: values.subject,
+        message: values.message,
+      });
 
       if (response.status === 200) {
         alert("Email sent successfully!");
@@ -98,7 +95,7 @@ const ContactForm: React.FC = () => {
             >
               Recipient Email
             </label>
-            <input
+            <Field
               id="recipientEmail"
               name="recipientEmail"
               type="email"
@@ -113,7 +110,7 @@ const ContactForm: React.FC = () => {
             >
               Subject
             </label>
-            <input
+            <Field
               id="subject"
               name="subject"
               type="text"

@@ -78,7 +78,7 @@ const Slider: React.FC<SliderProps> = () => {
   }, [currentSlide]);
 
   return (
-    <div className="flex md:flex-row flex-col justify-center gap-x-5 items-center">
+    <div className="flex md:flex-row flex-col  justify-center gap-x-5 items-center">
       <button
         onClick={prevSlide}
         className="border-2 text-customWhite hidden md:block border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
@@ -147,7 +147,7 @@ const Slider: React.FC<SliderProps> = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center  md:hidden gap-x-5 md:h mt-2">
+      <div className="flex justify-center items-center mb-5 md:hidden gap-x-5 md:h mt-2">
         <button
           onClick={prevSlide}
           className="border-2 text-customWhite  border-customWhite hover:border-darkPurple bg-transparent hover:bg-darkPurple ease-in duration-150 rounded-full px-2 py-1 hover:text-primary"
