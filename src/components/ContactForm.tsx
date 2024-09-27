@@ -56,11 +56,14 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (values: FormValues) => {
     try {
-      const response = await axios.post(`${API_URL}/send-email`, {
-        recipientEmail: values.recipientEmail,
-        subject: values.subject,
-        message: values.message,
-      });
+      const response = await axios.post(
+        `https://email-servic-1.onrender.com/send-email`,
+        {
+          recipientEmail: values.recipientEmail,
+          subject: values.subject,
+          message: values.message,
+        }
+      );
 
       if (response.status === 200) {
         alert("Email sent successfully!");
