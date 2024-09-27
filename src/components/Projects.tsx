@@ -31,8 +31,7 @@ const slides = [
       "The Dwello app is designed to help users find their perfect home with an interactive and visually appealing interface. The application leverages the power of Next.js for server-side rendering and GSAP for smooth and engaging animations.",
     image: Dwello,
     githubLink: "https://github.com/Genthh/dwello",
-    deploymentLink:
-      "https://dwello-g5mg-8af0aved4-genthhs-projects.vercel.app/",
+    deploymentLink: "https://dwello-g5mg.vercel.app/",
   },
   {
     id: 3,

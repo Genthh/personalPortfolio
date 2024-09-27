@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="md:px-44 px-5 md:py-10 pb-5 mx-auto">
-      <h1 className="form-header md:text-3xl text-xl text-customWhite mt-5">
+      <h1 className="form-header md:text-3xl text-2xl text-customWhite mt-5">
         Get in <span className="text-darkPurple">Touch</span>!
       </h1>
       <p className="form-description text-white py-1 mb-5">
