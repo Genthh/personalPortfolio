@@ -14,8 +14,9 @@ const config: Config = {
         customWhite: "#D9D9D9",
         customPurple: "#ba9ffb",
         darkPurple: "#b377d8",
-        // "#a688fa"
-        // "#2E073F"
+      },
+      boxShadow: {
+        neonGlowPurple: "0 0 3px 1px #b377d8", // Neon glow effect
       },
     },
   },

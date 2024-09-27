@@ -25,3 +25,9 @@ export interface TextSplitProps {
   style?: React.CSSProperties;
   fontWeight?: string;
 }
+
+export interface FormValues {
+  recipientEmail: string;
+  subject: string;
+  message: string;
+}

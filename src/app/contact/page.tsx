@@ -1,12 +1,18 @@
 "use client";
-import { Navbar } from "@/components/Navbar";
-import Projects from "@/components/Projects";
 import React from "react";
+import { Formik, Form, Field } from "formik";
+import axios from "axios";
+import { FormValues } from "@/types/types";
+import ContactForm from "@/components/ContactForm";
 
-const page = () => {
+const API_URL: string | undefined = process.env.customKey;
+
+const EmailForm: React.FC = () => {
   return (
-    <div className="max-w-6xl flex  flex-col md:mx-auto  md:px-4 mx-5 "></div>
+    <div className="max-w-6xl mx-auto">
+      <ContactForm />
+    </div>
   );
 };
 
-export default page;
+export default EmailForm;

@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import Logo from "../_svgs/Logo";
+
 export const Loader = () => {
   const svgRef = useRef(null);
 
@@ -74,7 +74,6 @@ export const Loader = () => {
             fill="#D9D9D9"
           >
             PIRROX
-            {/* <Logo /> */}
           </text>
         </g>
       </svg>

@@ -7,14 +7,13 @@ import { TextSplit } from "./controlled/TextSplit";
 import { Button } from "./controlled/Button";
 
 export const Hero: React.FC = () => {
-  const downloadTxtFile = () => {
-    const texts = ["line 1", "line 2", "line 3"];
-    const file = new Blob(texts, { type: "text/plain" });
+  const downloadCV = () => {
     const element = document.createElement("a");
-    element.href = URL.createObjectURL(file);
-    element.download = "100ideas-" + Date.now() + ".txt";
+    element.href = "/GentHulaj_cv.pdf"; // Assuming your CV is in the `public` folder
+    element.download = "GentHulaj_cv.pdf"; // Optional: customize file name if you want
     document.body.appendChild(element);
     element.click();
+    document.body.removeChild(element); // Clean up after download
   };
 
   return (
@@ -40,14 +39,25 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className="flex gap-3 justify-start md:items-center items-end">
-          <Button onClick={downloadTxtFile} text="Download CV" />
+          <Button onClick={downloadCV} text="Download CV" />
           <div className="flex gap-x-3">
-            <div className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer">
+            <a
+              className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/gent-hulaj-612525233/"
+            >
               <LinkedIn />
-            </div>
-            <div className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer">
+            </a>
+
+            <a
+              className="flex items-center justify-center h-11 w-11 rounded-full bg-customPurple shadow-lg cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Genthh"
+            >
               <GitHub />
-            </div>
+            </a>
           </div>
         </div>
       </div>

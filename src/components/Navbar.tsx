@@ -55,7 +55,7 @@ export const Navbar = () => {
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>{" "}
           <Link
-            href="/"
+            href="/contact"
             className="text-white hover:text-darkPurple ease-in duration-150 relative group"
           >
             Contact

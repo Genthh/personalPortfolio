@@ -11,3 +11,10 @@ body {
 .heightContainer {
   height: calc(100vh - 100px);
 }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: none;
+  -webkit-text-fill-color: #ffffff;
+}

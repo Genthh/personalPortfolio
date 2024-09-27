@@ -18,7 +18,7 @@ const slides = [
     title: "This Project",
     technologies: ["Next Js", "Gsap", "Tailwind CSS"],
     content:
-      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
+      "This personal portfolio website showcases my skills, projects, and experiences. Built with Next.js, TypeScript, GSAP for animations, and Tailwind CSS for styling, it is designed to be responsive and visually appealing, providing a great user experience on both desktop and mobile devices.",
     image: Thisproject,
     githubLink: "https://github.com/Genthh/personalPortfolio",
     deploymentLink: "https://pirrox.dev",
@@ -49,7 +49,7 @@ const slides = [
     title: "Chuck Norris Jokes",
     technologies: ["Next Js", "ThreeGsap", "Tailwind CSS"],
     content:
-      "Gent Portfolio V1 is a modern digital showcase of personal projects. Built with Next.js for performance, it features immersive 3D elements using Three.js, with smooth animations powered by GSAP. Tailwind CSS ensures a responsive and clean.",
+      "Chuck Norris Jokes is a fun and interactive web application that fetches and displays random Chuck Norris jokes. Built with Next.js for performance. Tailwind CSS ensures a responsive and clean user interface.",
     image: ChuckNorris,
     githubLink: "https://github.com/Genthh/Chuck-Norris-jokes",
     deploymentLink: "https://chuck-norris-jokes-blue.vercel.app/",
@@ -94,7 +94,7 @@ const Slider: React.FC<SliderProps> = () => {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="flex-shrink-0 gap-y-4 flex flex-col md:items-start rounded px-2 py-4 text-customWhite w-full"
+              className="flex-shrink-0 gap-y-4 flex flex-col justify-between md:items-start rounded px-2 py-4 text-customWhite w-full"
             >
               <div className="flex flex-col justify-center items-start">
                 <h1 className="text-2xl font-bold text-center text-darkPurple">
@@ -114,7 +114,7 @@ const Slider: React.FC<SliderProps> = () => {
               <div className="flex flex-wrap">
                 <p className="">{slide.content}</p>
               </div>
-              <div className="flex gap-x-3 md:h-32  items-end">
+              <div className="flex gap-x-3 h-32  items-end">
                 <div className="md:w-1/2   ">
                   <Image
                     src={slide.image}
