@@ -34,9 +34,9 @@ export const Navbar = () => {
   };
 
   const handleLinkClick = () => {
-    setIsMenuOpen(false); // Close the menu
-    if (burgerMenuRef.current) {
-      burgerMenuRef.current.reverseBurger(); // Reverse the burger animation
+    setIsMenuOpen(false);
+    if (burgerMenuRef.current && "reverseBurger" in burgerMenuRef.current) {
+      (burgerMenuRef.current as { reverseBurger: () => void }).reverseBurger();
     }
   };
 
