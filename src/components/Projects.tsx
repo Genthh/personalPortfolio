@@ -165,9 +165,9 @@ const Slider: React.FC<SliderProps> = () => {
                   <Image
                     src={slide.image}
                     alt={slide.title}
-                    width={400}
-                    height={400}
-                    className="rounded shadow-2xl max-w-full"
+                    width={300}
+                    height={300}
+                    className="rounded shadow-2xl max-w-full md:w-[400px] md:h-[120px] object-cover"
                   />
                 </div>
 
