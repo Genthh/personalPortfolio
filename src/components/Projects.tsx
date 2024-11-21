@@ -15,7 +15,7 @@ const Slider: React.FC<SliderProps> = () => {
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
-
+  console.log(slides);
   const prevSlide = () => {
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
